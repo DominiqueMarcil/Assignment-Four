@@ -5,12 +5,18 @@
     text-transform: capitalize;
   }
 
-
+  .lunatique-variable2 {
+    font-family: "lunatique-variable",sans-serif;
+    font-variation-settings: 'wdth' 100;
+    letter-spacing: 0.5em;
+    font-size: 2.2em;
+    padding: 0%;
+  }
 
   .megascope {
     font-family: "megascope-variable",sans-serif;
     font-variation-settings: 'SCOP' 0, 'wght' 700;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.5rem;
     text-transform: capitalize;
   }
 
@@ -21,3 +27,12 @@
     text-transform: capitalize;
     font-size: 4rem;
   }
+  
+  .ad-gothic {
+    font-family: "ad-gothic-variable",sans-serif;
+    font-variation-settings: 'wdth' 100;
+    text-transform: capitalize;
+  }
+
+
+
