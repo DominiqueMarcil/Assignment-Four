@@ -158,17 +158,25 @@ img {
 
 .grid__item--8 {
     grid-row: span 2;
-    grid-column: span 3;
-    font-size: 0.5rem;
-    transition: font-size 1s ease-out;
-    letter-spacing: normal;
+    grid-column: span 2;
+    font-size: 1rem;
+    margin-left: 1rem;
+    letter-spacing: 0.4rem;
+    text-align: left;
+    animation: typing 4s steps(40), blink-caret .75s step-end infinite;
 }
 
-.grid__item--8:hover {
-    font-size: 0.9rem; /* Smooth transition for all properties */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
 }
-
 
 .grid__item--9 {
-    grid-row: span 2;
+    display: none;
+    animation: moveUpDown 4s;
+}
+
+@keyframes moveUpDown {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(50px); }
 }
