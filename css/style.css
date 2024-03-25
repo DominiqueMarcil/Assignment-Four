@@ -57,7 +57,6 @@ body {
     margin: 0;
     text-align: center;
     font-size: 200%;
-    color: var(--text);
 }
 
 img {
@@ -78,19 +77,6 @@ img {
     position: relative;
 }
 
-
-.grid__item::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: var(--lines);
-    color: var(--box1);
-    padding: 0px 3px;
-    font-family: serif;
-    letter-spacing: normal;
-}
-
-
 .grid__item--1 {
     grid-column: span 1;
 }
@@ -103,7 +89,12 @@ img {
 .grid__item--3 {
     grid-column: span 2; /* Starts at line 3 and ends at line 5 */
     grid-row: span 6;
-    transition: grid-column 300s ease; /* Smooth transition for grid-column property */
+    font-size: large;
+    letter-spacing: large;
+    width: 100%; /* Expand the paragraph lengthwise */
+    text-align: right;
+    line-height: 1rem;
+    size: max-content;
 }
 
 .grid__item--4 {
@@ -139,6 +130,26 @@ img {
 .grid__item--6 {
     grid-row: span 2;
     grid-column: span 3;
+    color: var(--text); /* Use the --text variable for the color property */
+    animation: colorChange 5s infinite; /* Use the colorChange animation */
+}
+
+@keyframes colorChange {
+    0% {
+        --text: #ff0000; /* Bright red */
+    }
+    25% {
+        --text: #ff3300; /* Slightly darker red */
+    }
+    50% {
+        --text: #ff6600; /* Darker red */
+    }
+    75% {
+        --text: #ff9900; /* Even darker red */
+    }
+    100% {
+        --text: #ffcc00; /* Very dark red */
+    }
 }
 
 .grid__item--7 {
@@ -148,30 +159,16 @@ img {
 .grid__item--8 {
     grid-row: span 2;
     grid-column: span 3;
+    font-size: 0.5rem;
+    transition: font-size 1s ease-out;
+    letter-spacing: normal;
 }
 
 .grid__item--8:hover {
-    grid-row: span 3;
+    font-size: 0.9rem; /* Smooth transition for all properties */
 }
 
 
 .grid__item--9 {
     grid-row: span 2;
-}
-
-
-.grid__item:nth-child(4n) {
-    background-color: var(--box3);
-}
-
-.grid__item:nth-child(4n+1) {
-    background-color: var(--box2);
-}
-
-.grid__item:nth-child(4n+2) {
-    background-color: var(--box1);
-}
-
-.grid__item:nth-child(4n+3) {
-    background-color: var(--box4);
 }
